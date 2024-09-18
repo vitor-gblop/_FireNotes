@@ -2,6 +2,9 @@ let arr = ["dfghjklç", "dfghjkl", "cvfghnjkl"]
 
 function createElements(_title = "", _text = "", key)
 {
+    console.log(key);
+    
+
     let div = document.createElement("div");
     let span = document.createElement("span");
     let title = document.createElement("span");
@@ -117,11 +120,13 @@ Array.from(ev).forEach(item =>{
     item.addEventListener("click", (e)=>{
         let content = e.currentTarget.querySelector('.content');
         let title = e.currentTarget.querySelector('.title')
-        _KEYS_ = e.target.id;
-        _TITLE_ = title.innerHTML;
 
-        console.log(_TITLE_);
+        _TITLE_ = title.innerHTML;
+        _KEYS_ = item.id;
+        // console.log(item.id);
         
+        
+
         if (conf_aux != 0) 
         {
             activeModal(content.innerHTML);

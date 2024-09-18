@@ -8,6 +8,11 @@ section
     border-radius: 15px;
 }
 
+textarea 
+{
+    background-color: transparent;
+}
+
 #notes_list
 {
 
@@ -64,6 +69,7 @@ nav .opt:hover
 
     z-index: 5;
     background-color: #0000006b;
+    border-radius: 0%;
 }
 #note_modal
 {
@@ -79,9 +85,10 @@ nav .opt:hover
     width: 100%;
     height: auto;
     margin: auto;
-    padding: 5px;
+    padding: 3px;
 
     border-radius: 15px;
+    background-color: white;
 }
 #note_modal div textarea
 {
@@ -90,5 +97,23 @@ nav .opt:hover
     margin: auto;
 
     border-radius: 15px;
+}
+
+@media (max-width: 600px)
+{
+    section
+    {
+        width: 90%;
+    }
+    #note_modal
+    {
+        width: 84%;
+        position: relative;
+        right: 8px;
+    }
+    #note_modal div
+    {
+        width: 95%;
+    }
 }
 
