@@ -11,7 +11,7 @@ function createElements(_title = "", _text = "", key)
     let br = document.createElement("br");
     let str = document.createElement("strong");
 
-    let conf_drop = document.createElement("div");
+    // let conf_drop = document.createElement("div");
     let nav = document.createElement("nav");
     let item_1 = document.createElement("a");
     let item_2 = document.createElement("a");
@@ -19,6 +19,7 @@ function createElements(_title = "", _text = "", key)
     let itens_div = document.createElement("div")
 
     nav.className = 'config_nav';
+    nav.id = key;
     let itens = [item_1, item_2, item_3];
     itens.forEach(item => {
         item.href = "#";
@@ -33,6 +34,7 @@ function createElements(_title = "", _text = "", key)
     let ico_span_2 = document.createElement('span');
     ico_span_2.className = "material-symbols-outlined";
     ico_span_2.innerHTML = 'delete';
+    item_2.setAttribute("onclick", "deleteNote(this)");
     item_2.appendChild(ico_span_2);
 
     let ico_span_3 = document.createElement('span');
@@ -82,7 +84,7 @@ function activeConfigurations()
     {
         let x = document.getElementsByClassName('config_nav');
         Array.from(x).forEach(item=>{
-            item.style.display = 'block';
+            item.style.display = 'flex';
         })
         conf_aux = 0;
     }

@@ -46,6 +46,7 @@ textarea
     position: absolute;
     left: -100px;
     transition: 0.4s;
+    z-index: 6;
 }
 #dropdown nav .opt
 {

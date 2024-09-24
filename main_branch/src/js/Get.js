@@ -21,6 +21,20 @@ function getData()
     return x;
 }
 
+function getVal(token = "")
+{
+    let db = firebase.database().ref('notes/'+token+'/nota');
+
+    db.on('value', (e)=>
+    {
+        localStorage.setItem("notes_data", JSON.stringify(obj));
+    });
+    let x = JSON.parse(localStorage.getItem("notes_data"));
+
+    localStorage.removeItem("notes_data");
+    return x;
+}
+
 let getNumItens = ()=>{
     return numItens;
 }

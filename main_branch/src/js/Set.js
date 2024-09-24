@@ -19,7 +19,24 @@ function salvarNota()
     firebase.database().ref("notes/" + _KEYS_).set({
         "nota" : textArea,
         "titulo" : _TITLE_
+        // sugestão: mudar nota para content ou conteudo
     })
 
     location.reload()
+}
+
+function setNoteName(tag = document) 
+{
+    let parent = tag.parentElement
+    let content = x
+    console.log();
+
+    // prompt("Novo nome da nota: ");
+
+    // firebase.database().ref("notes/" + _KEYS_).set({
+    //     "nota" : textArea,
+    //     "titulo" : _TITLE_
+    // })
+
+    // location.reload()
 }
