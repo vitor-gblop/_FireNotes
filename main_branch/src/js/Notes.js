@@ -2,9 +2,6 @@ let arr = ["dfghjklç", "dfghjkl", "cvfghnjkl"]
 
 function createElements(_title = "", _text = "", key)
 {
-    console.log(key);
-    
-
     let div = document.createElement("div");
     let span = document.createElement("span");
     let title = document.createElement("span");
@@ -29,6 +26,7 @@ function createElements(_title = "", _text = "", key)
     let ico_span = document.createElement('span');
     ico_span.className = "material-symbols-outlined";
     ico_span.innerHTML = 'edit';
+    item_1.setAttribute("onclick", "setNoteName(this)");
     item_1.appendChild(ico_span);
 
     let ico_span_2 = document.createElement('span');
@@ -40,6 +38,7 @@ function createElements(_title = "", _text = "", key)
     let ico_span_3 = document.createElement('span');
     ico_span_3.className = "material-symbols-outlined";
     ico_span_3.innerHTML = 'download';
+    item_3.setAttribute("onclick", "downloadNote(this)");
     item_3.appendChild(ico_span_3);
 
     div.className = "note";

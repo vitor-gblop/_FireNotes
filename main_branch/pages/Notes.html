@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
     <title>Notas</title>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -60,13 +61,13 @@
                 </div>
                 <div>
                     <nav class="config_nav" id="AAAA">
-                        <a href="#" class="opt">
+                        <a href="#" class="opt" onclick="setNoteName(this)">
                             <span class="material-symbols-outlined">edit</span>
                         </a>
                         <a href="#" class="opt" onclick="deleteNote(this)">
                             <span class="material-symbols-outlined">delete</span>
                         </a>
-                        <a href="#" class="opt" onclick="setNoteName(this)">
+                        <a href="#" class="opt" onclick="downloadNote(this)">
                             <span class="material-symbols-outlined">download</span>
                         </a>
                     </nav>

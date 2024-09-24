@@ -27,16 +27,25 @@ function salvarNota()
 
 function setNoteName(tag = document) 
 {
-    let parent = tag.parentElement
-    let content = x
-    console.log();
+    let parent = tag.parentElement;
+    parent = parent.parentElement;
+    parent = parent.parentElement;
+    // console.log(parent);
 
-    // prompt("Novo nome da nota: ");
+    _KEYS_ = parent.id;
 
-    // firebase.database().ref("notes/" + _KEYS_).set({
-    //     "nota" : textArea,
-    //     "titulo" : _TITLE_
-    // })
+    let textArea = parent.children[0].querySelector('.content').innerHTML
+    // textArea = textArea.querySelector('.content').innerHTML
+    // console.log(textArea);    
+    
+    let newTitle = prompt("Novo nome da nota: ");
+    if (newTitle != "")
+    {
+        firebase.database().ref("notes/" + _KEYS_).set({
+            "nota" : textArea,
+            "titulo" : newTitle
+        })
+    }
 
-    // location.reload()
+    location.reload()
 }

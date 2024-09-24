@@ -38,3 +38,21 @@ function getVal(token = "")
 let getNumItens = ()=>{
     return numItens;
 }
+
+ // baixa apenas um projeto salvo
+ function downloadNote(tag = document)
+ {
+    let parent = tag.parentElement;
+    parent = parent.parentElement;
+    parent = parent.parentElement;
+
+    let content = parent.children[0].querySelector('.content').innerHTML;
+    let title = parent.children[0].querySelector('.title').innerHTML;
+
+    // transforma em string e baixa
+    let file_to_save = new File([content], title + ".txt")
+    const blobUrl = URL.createObjectURL(file_to_save);
+
+    tag.setAttribute("href" , blobUrl);
+    tag.setAttribute("download", file_to_save.name);
+ }
