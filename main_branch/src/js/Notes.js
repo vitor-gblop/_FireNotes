@@ -1,4 +1,3 @@
-let arr = ["dfghjklç", "dfghjkl", "cvfghnjkl"]
 
 function createElements(_title = "", _text = "", key)
 {
@@ -107,12 +106,21 @@ function closeModal()
 
     
     let notes = getData();
-    let i = 0;
-    notes.notes.forEach(item => {
-        createElements(item.titulo, item.nota, notes.key[i])
-        i++
-        // document.getElementsByTagName('textarea')[0].value = item.nota
-    });
+
+    if (notes.notes.length > 0)
+    {
+        let i = 0;
+        notes.notes.forEach(item => {
+            createElements(item.titulo, item.nota, notes.key[i])
+            i++
+            // document.getElementsByTagName('textarea')[0].value = item.nota
+        });
+    }
+    else
+    {
+        document.getElementById("no_notes").style.display = 'block';
+    }
+    
 })();
 
 

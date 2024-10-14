@@ -99,6 +99,12 @@ nav .opt:hover
     border-radius: 15px;
 }
 
+#no_notes
+{
+    display: none;
+}
+
+
 @media (max-width: 600px)
 {
     section
