@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <title>Notas</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <script src="../src/js/class.js" ></script>
+    <script src="../src/js/App.js"></script>
+    <script src="../src/js/Set.js"></script>
+    <script src="../src/js/Get.js"></script>
+    <script src="../src/js/Remove.js" ></script>
+
+    <link rel="stylesheet" href="../src/css/General.css">
+    <link rel="stylesheet" href="../src/css/Notes.css">
+</head>
+<body>
+    <section id="top_modal">
+        <div id="note_modal">
+            <div>
+                <textarea name="" id="edit_note_area"></textarea>
+            </div>
+            <button onclick="salvarNota()">salvar</button>
+            <button onclick="closeModal()">cancelar</button>
+        </div>
+    </section>
+
+    <header id="header">
+        <h1>FireNotes</h1>
+    </header>
+
+    <div id="dropdown">
+        <span>MENU</span>
+        <nav>
+            <a href="Index.html" class="opt" title="Home">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <a href="" class="opt" title="Notas">
+                <span class="material-symbols-outlined">edit</span>
+            </a>
+            <div class="opt" title="Configurações" onclick="activeConfigurations()">
+                <span class="material-symbols-outlined">settings</span>
+            </div>
+        </nav>
+    </div>
+
+    <section>
+        <h2>Notas</h2>
+        <br>
+        <div id="notes_list">
+            <p id="no_notes">Sem Notas</p>
+           
+        </div>
+    </section>
+
+    <script src="../src/js/Notes.js"></script>
+</body>
+</html>
